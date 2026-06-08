@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add User UI</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen overflow-auto bg-black text-white flex flex-col items-center justify-center gap-10">
+
+  <!-- Add User -->
+  <div class="w-[400px] bg-neutral-900 border border-neutral-700 rounded-2xl p-6 mt-10">
+    <h2 class="text-xl font-semibold text-center mb-4">Add User</h2>
+
+    <form class="space-y-3 text-sm">
+      <div>
+        <label class="text-neutral-400">Name</label>
+        <input id="name" required autocomplete="off" class="w-full mt-1 bg-neutral-800 rounded-md px-3 py-2 outline-none" />
+      </div>
+
+      <div>
+        <label class="text-neutral-400">Role</label>
+        <input id="role" required autocomplete="off" class="w-full mt-1 bg-neutral-800 rounded-md px-3 py-2 outline-none" />
+      </div>
+
+      <div>
+        <label class="text-neutral-400">Bio</label>
+        <textarea rows="2" id="bio" required autocomplete="off"
+          class="w-full mt-1 bg-neutral-800 rounded-md px-3 py-2 outline-none"></textarea>
+      </div>
+
+      <div>
+        <label class="text-neutral-400">Photo URL</label>
+        <input id="photo" type="url" required class="w-full mt-1 bg-neutral-800 rounded-md px-3 py-2 outline-none" />
+      </div>
+
+      <button class="w-full mt-2 border-2 border-neutral-800 py-2 rounded-lg hover:bg-neutral-700 transition-transform active:scale-95 scale-120">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <!-- Cards -->
+  <div id="cards" class="flex gap-8 mb-5">
+
+
+  </div>
+
+</body>
+<script src="this.js"></script>
+</html>

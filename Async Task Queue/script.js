@@ -17,15 +17,12 @@ function disableBtn() {
 function enableBtn() {
   btn.disabled = false;
   btn.className =
-    "block bg-indigo-500 w-fit rounded-xl text-white px-4 py-3 text-5xl font-bold mt-10 mb-10 mx-auto transition-transform active:scale-95 scale-120";
+    "block bg-indigo-400 w-fit rounded-xl text-white px-4 py-3 text-5xl font-bold mt-10 mb-10 mx-auto transition-transform active:scale-95 scale-120";
 
   if (warning.isConnected) {
     warning.remove();
   }
 }
-
-
-
 
 function createTask(id) {
   let ul = document.getElementById("taskList");
@@ -42,18 +39,16 @@ function createTask(id) {
       return new Promise((resolve) => {
         this.status = "Running";
         console.log(`Task ${id} started`);
-        if(this.status== "Running") {
-          li.textContent = `Task ${id} -> ${this.status}`;
-          li.className = "block bg-blue-700 w-fit rounded-xl text-white px-4 py-2 text-4xl font-bold mb-5 mx-auto"
-        }
+        li.textContent = `Task ${id} -> ${this.status}`;
+        li.className =
+          "block bg-blue-700 w-fit rounded-xl text-white px-4 py-2 text-4xl font-bold mb-5 mx-auto";
         const time = Math.floor(Math.random() * 5) + 1;
 
         setTimeout(() => {
           this.status = "Completed";
-        if(this.status== "Completed") {
           li.textContent = `Task ${id} -> ${this.status}`;
-          li.className = "block bg-green-700 w-fit rounded-xl text-white px-4 py-2 text-4xl font-bold mb-5 mx-auto"
-        }
+          li.className =
+            "block bg-green-700 w-fit rounded-xl text-white px-4 py-2 text-4xl font-bold mb-5 mx-auto";
           console.log(`Task ${id} completed in ${time} sec`);
           resolve();
         }, time * 1000);
@@ -66,7 +61,7 @@ let isRunning = false;
 
 let taskId = 1;
 btn.addEventListener("click", function () {
-    if (queue.length >= 5) {
+  if (queue.length >= 5) {
     disableBtn();
   } else {
     enableBtn();
@@ -91,9 +86,9 @@ async function tryToRunNext() {
   await nextTask.run();
   isRunning = false;
 
-    if (queue.length < 5) {
+  if (queue.length < 5) {
     enableBtn();
   }
-  
+
   tryToRunNext();
 }

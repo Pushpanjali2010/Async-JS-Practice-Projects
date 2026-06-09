@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-slate-950 min-h-screen text-white">
+
+    <!-- Container -->
+    <div class="max-w-5xl mx-auto px-6 py-12">
+
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold tracking-tight">
+                GitHub User Finder
+            </h1>
+            <p class="text-slate-400 mt-3">
+                Search any GitHub developer and explore their profile.
+            </p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-3 shadow-xl mb-8">
+            <div class="flex flex-col md:flex-row gap-3">
+
+                <input
+                    type="text"
+                    placeholder="Search GitHub username..."
+                    class="userinp flex-1 bg-slate-950 border border-slate-800 rounded-xl px-5 py-4 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+
+                <button
+                    class="search bg-blue-600 hover:bg-blue-700 transition-all px-8 py-4 rounded-xl font-semibold"
+                >
+                    Search
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+
+            <div class="flex flex-col lg:flex-row gap-8">
+
+                <!-- Avatar -->
+                <div class="flex justify-center lg:block">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/9919?v=4"
+                        alt="Profile"
+                        class="w-40 h-40 rounded-full border-4 border-slate-700 object-cover"
+                    >
+                </div>
+
+                <!-- User Details -->
+                <div class="flex-1">
+
+                    <!-- Top -->
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+
+                        <div>
+                            <h2 class="text-3xl font-bold">
+                                GitHub
+                            </h2>
+
+                            <p class="text-blue-400 text-lg">
+                                @github
+                            </p>
+                        </div>
+
+                        <div class="text-slate-400">
+                            Joined Jan 25, 2008
+                        </div>
+
+                    </div>
+
+                    <!-- Bio -->
+                    <p class="text-slate-300 mt-6 leading-relaxed">
+                        How people build software. Platform for version control,
+                        collaboration, and open-source development.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 mt-8">
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 text-center">
+                            <p class="text-slate-400 text-sm">
+                                Repositories
+                            </p>
+                            <h3 class="text-2xl font-bold mt-1">
+                                492
+                            </h3>
+                        </div>
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 text-center">
+                            <p class="text-slate-400 text-sm">
+                                Followers
+                            </p>
+                            <h3 class="text-2xl font-bold mt-1">
+                                18.5K
+                            </h3>
+                        </div>
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-5 text-center">
+                            <p class="text-slate-400 text-sm">
+                                Following
+                            </p>
+                            <h3 class="text-2xl font-bold mt-1">
+                                0
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <!-- Info Grid -->
+                    <div class="grid md:grid-cols-2 gap-5 mt-8">
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                            <p class="text-slate-500 text-sm">Location</p>
+                            <p class="mt-1 font-medium">
+                                San Francisco, California
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                            <p class="text-slate-500 text-sm">Company</p>
+                            <p class="mt-1 font-medium">
+                                GitHub Inc.
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                            <p class="text-slate-500 text-sm">Website</p>
+                            <p class="mt-1 text-blue-400">
+                                github.com
+                            </p>
+                        </div>
+
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-4">
+                            <p class="text-slate-500 text-sm">Email</p>
+                            <p class="mt-1 font-medium">
+                                Not Available
+                            </p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
